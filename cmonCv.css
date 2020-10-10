@@ -1,5 +1,4 @@
 body {
- 
   background-image: "background.jpg";
   font-family:"century gothic";
 }
@@ -16,40 +15,33 @@ p {
 }
 
 ul {
-
 	color: white;
   font-size: 15px;
   font-family:"century gothic";
 }
 
-.sidebar {
-        grid-area: class="box centrale";
-    }
 
-    .content {
-        grid-area: class="box content";
-    }
+/* definition de la grille */
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 3fr 5fr;
+  grid-gap: 15px;
+}
 
-    .header {
-        grid-area: class="box-header";
-    }
+.one {
+  grid-column: 1;
+  position: fixed;
+}
 
-    .picture {
+.two {
+  grid-column: 2;
+  flex: auto;
+}
 
-		grid-area: class="box-picture"
-    }
-
-  
-    .wrapper {
-        display: grid;
-    grid-gap: 15px;
-        grid-template-columns: 1fr 2fr 3fr; 
-        grid-row: 1fr 2fr 3fr;
-        grid-template-areas: "header picture picture" 
-       						 "centrale content" 
-       						 "content content";
-        					
-    } 
+.three {
+  grid-column: 3;
+  flex: auto;
+}
 
 .box {
   grid-column: span 1;
@@ -57,28 +49,5 @@ ul {
   color: #fff;
   border-radius: 5px;
   padding: 10px;
-  font-size: 150%;
-
- 
+  font-size: 100%;
 }
-
-.box-picture {
- 
- text-align: center;
-
-}
-
-
- .box-header {
- 	
-   text-align: center;
-
- }
-
- .box-content: {
-
- }
-
-
-}
-
